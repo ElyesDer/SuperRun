@@ -19,6 +19,10 @@
 		E9974C2A2659B03100A81F77 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974BFB2659B03100A81F77 /* Persistence.swift */; };
 		E9974C2B2659B03100A81F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9974BFC2659B03100A81F77 /* Assets.xcassets */; };
 		E9974C2C2659B03100A81F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9974BFC2659B03100A81F77 /* Assets.xcassets */; };
+		E9974C412659B0E300A81F77 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C402659B0E300A81F77 /* MapView.swift */; };
+		E9974C462659B2C500A81F77 /* PinPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C452659B2C500A81F77 /* PinPoint.swift */; };
+		E9974C482659B3A600A81F77 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C472659B3A600A81F77 /* APIService.swift */; };
+		E9974C4B2659B47400A81F77 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4A2659B47400A81F77 /* AppConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		E9974C1C2659B03100A81F77 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9974C202659B03100A81F77 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E9974C222659B03100A81F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9974C402659B0E300A81F77 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E9974C452659B2C500A81F77 /* PinPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPoint.swift; sourceTree = "<group>"; };
+		E9974C472659B3A600A81F77 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E9974C4A2659B47400A81F77 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,10 @@
 		E9974BF62659B03100A81F77 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E9974C492659B46200A81F77 /* Environment */,
+				E9974C432659B2A700A81F77 /* Database */,
+				E9974C422659B29D00A81F77 /* Synchronization */,
+				E9974C3B2659B09700A81F77 /* Modules */,
 				E9974BF92659B03100A81F77 /* SuperRunApp.swift */,
 				E9974BFA2659B03100A81F77 /* ContentView.swift */,
 				E9974BFB2659B03100A81F77 /* Persistence.swift */,
@@ -157,6 +169,78 @@
 				E9974C222659B03100A81F77 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		E9974C3B2659B09700A81F77 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C3F2659B0BA00A81F77 /* MapView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E9974C3C2659B0A100A81F77 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E9974C3D2659B0A700A81F77 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E9974C3E2659B0B200A81F77 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C402659B0E300A81F77 /* MapView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E9974C3F2659B0BA00A81F77 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C3E2659B0B200A81F77 /* Components */,
+				E9974C3D2659B0A700A81F77 /* ViewModels */,
+				E9974C3C2659B0A100A81F77 /* Views */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		E9974C422659B29D00A81F77 /* Synchronization */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C472659B3A600A81F77 /* APIService.swift */,
+			);
+			path = Synchronization;
+			sourceTree = "<group>";
+		};
+		E9974C432659B2A700A81F77 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C442659B2AF00A81F77 /* Models */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		E9974C442659B2AF00A81F77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C452659B2C500A81F77 /* PinPoint.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9974C492659B46200A81F77 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C4A2659B47400A81F77 /* AppConfig.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +401,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9974C232659B03100A81F77 /* SuperRun.xcdatamodeld in Sources */,
+				E9974C4B2659B47400A81F77 /* AppConfig.swift in Sources */,
+				E9974C482659B3A600A81F77 /* APIService.swift in Sources */,
 				E9974C292659B03100A81F77 /* Persistence.swift in Sources */,
+				E9974C462659B2C500A81F77 /* PinPoint.swift in Sources */,
+				E9974C412659B0E300A81F77 /* MapView.swift in Sources */,
 				E9974C252659B03100A81F77 /* SuperRunApp.swift in Sources */,
 				E9974C272659B03100A81F77 /* ContentView.swift in Sources */,
 			);
