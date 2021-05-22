@@ -11,5 +11,9 @@ struct AppConfig {
     private static let baseUrl = "http://lmstudio.free.fr/"
     enum EndPoints : String {
         case locations = "lyon"
+        
+        func buildPath() -> String {
+            return AppConfig.baseUrl + self.rawValue
+        }
     }
 }

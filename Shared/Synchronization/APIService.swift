@@ -20,8 +20,6 @@ class APIService {
         case error(String)
     }
     
-    
-    //    AppConfig.EndPoints.followers.buildPath()
     func get <T:Codable> (of type :T.Type, from url : String) -> AnyPublisher<T,Error> {
         
         var dataTask : URLSessionDataTask?
