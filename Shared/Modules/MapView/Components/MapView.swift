@@ -20,19 +20,45 @@ struct MapView: View {
         span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
     )
     
+    @State var offset: CGFloat = 0
+    
+    @State var toooogle : Bool = false
+    
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: cities) { city in
-            MapPin(coordinate: city.coordinate, tint: .green)
-            //            MapAnnotation(
-            //                coordinate: city.coordinate,
-            //                anchorPoint: CGPoint(x: 0.5, y: 0.5)
-            //            ) {
-            //                Circle()
-            //                    .stroke(Color.green)
-            //                    .frame(width: 44, height: 44)
-            //            }
+        
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
+            Map(coordinateRegion: $region, annotationItems: cities) { city in
+                MapPin(coordinate: city.coordinate, tint: .green)
+            }
+            .onTapGesture {
+                toooogle.toggle()
+            }
+            .edgesIgnoringSafeArea(.all)
+            
+            GeometryReader { geo in
+                
+                BottomSheet(offset: $offset, value: (-geo.frame(in: .global).height + 150))
+                    .offset(y: geo.frame(in: .global).height - 140)
+                    // adding Gesture
+                    .offset(y: offset)
+                    .gesture(DragGesture().onChanged({ value in
+                        
+                        withAnimation {
+                            
+                            if value.startLocation.y > geo.frame(in: .global).midX {
+                                if  offset > (-geo.frame(in: .global).height + 150) {
+                                    offset = value.translation.height
+                                }
+                            }
+                        }
+                    }).onEnded({ value in
+                        withAnimation {
+                            offset = 0
+                        }
+                    }))
+            }
+            .ignoresSafeArea(.all, edges: .bottom)
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
