@@ -24,6 +24,7 @@
 		E9974C482659B3A600A81F77 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C472659B3A600A81F77 /* APIService.swift */; };
 		E9974C4B2659B47400A81F77 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4A2659B47400A81F77 /* AppConfig.swift */; };
 		E9974C4D2659B70600A81F77 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4C2659B70600A81F77 /* BottomSheet.swift */; };
+		E9974C4F2659CD7400A81F77 /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4E2659CD7400A81F77 /* ImageCarousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E9974C472659B3A600A81F77 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E9974C4A2659B47400A81F77 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E9974C4C2659B70600A81F77 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		E9974C4E2659CD7400A81F77 /* ImageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			children = (
 				E9974C402659B0E300A81F77 /* MapView.swift */,
 				E9974C4C2659B70600A81F77 /* BottomSheet.swift */,
+				E9974C4E2659CD7400A81F77 /* ImageCarousel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				E9974C292659B03100A81F77 /* Persistence.swift in Sources */,
 				E9974C462659B2C500A81F77 /* PinPoint.swift in Sources */,
 				E9974C412659B0E300A81F77 /* MapView.swift in Sources */,
+				E9974C4F2659CD7400A81F77 /* ImageCarousel.swift in Sources */,
 				E9974C252659B03100A81F77 /* SuperRunApp.swift in Sources */,
 				E9974C272659B03100A81F77 /* ContentView.swift in Sources */,
 			);

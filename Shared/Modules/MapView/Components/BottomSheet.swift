@@ -31,6 +31,8 @@ struct BottomSheet: View {
     
     @StateObject var viewModel = SheetViewModel(location: .init(city: "Tunisia", isOnline: true, distance: 234, locations: [.init(name: "Sidi bou Said", latitude: 33.12332, longitude: 10.12312)]))
     
+    @State private var presentImageViewer = false
+    
     @ViewBuilder
     var CityViewRender : some View {
         VStack(alignment : .leading) {
@@ -60,10 +62,15 @@ struct BottomSheet: View {
                             .offset(x: -CGFloat(index * 3), y: CGFloat(index * 3))
                     }
                 }
+                .onTapGesture {
+                    self.presentImageViewer.toggle()
+                }
             }
             .padding(.horizontal, 5)
         }
+        
         .background(BlurView(style: .systemMaterial))
+        
     }
     
     var body: some View {
@@ -76,6 +83,9 @@ struct BottomSheet: View {
                 .padding(.bottom, 5)
             
             CityViewRender
+                .fullScreenCover(isPresented: $presentImageViewer) {
+                    ImageCarousel( images: $viewModel.images)
+                }
             
             Button(action: {}, label: {
                 ZStack{
