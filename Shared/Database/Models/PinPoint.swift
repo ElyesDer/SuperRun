@@ -10,6 +10,7 @@ import MapKit
 
 // MARK: - PinPoint
 struct PinPoint: Codable {
+    let id = UUID()
     let city: String
     let isOnline: Bool
     let distance: Int

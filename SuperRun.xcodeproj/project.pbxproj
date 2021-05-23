@@ -25,6 +25,7 @@
 		E9974C4B2659B47400A81F77 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4A2659B47400A81F77 /* AppConfig.swift */; };
 		E9974C4D2659B70600A81F77 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4C2659B70600A81F77 /* BottomSheet.swift */; };
 		E9974C4F2659CD7400A81F77 /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4E2659CD7400A81F77 /* ImageCarousel.swift */; };
+		E9974C522659DB0400A81F77 /* Map+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C512659DB0400A81F77 /* Map+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E9974C4A2659B47400A81F77 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E9974C4C2659B70600A81F77 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		E9974C4E2659CD7400A81F77 /* ImageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarousel.swift; sourceTree = "<group>"; };
+		E9974C512659DB0400A81F77 /* Map+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,10 +245,19 @@
 		E9974C492659B46200A81F77 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				E9974C502659DAF900A81F77 /* Extensions */,
 				E9974BFC2659B03100A81F77 /* Assets.xcassets */,
 				E9974C4A2659B47400A81F77 /* AppConfig.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		E9974C502659DAF900A81F77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C512659DB0400A81F77 /* Map+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +419,7 @@
 			files = (
 				E9974C232659B03100A81F77 /* SuperRun.xcdatamodeld in Sources */,
 				E9974C4D2659B70600A81F77 /* BottomSheet.swift in Sources */,
+				E9974C522659DB0400A81F77 /* Map+.swift in Sources */,
 				E9974C4B2659B47400A81F77 /* AppConfig.swift in Sources */,
 				E9974C482659B3A600A81F77 /* APIService.swift in Sources */,
 				E9974C292659B03100A81F77 /* Persistence.swift in Sources */,

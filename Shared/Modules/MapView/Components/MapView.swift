@@ -8,11 +8,67 @@
 import SwiftUI
 import MapKit
 
+struct PinAnnotation : MapAnnotationItem {
+    let id = UUID()
+    let color : Color
+    let coordinate: CLLocationCoordinate2D
+    
+    var annotation: some MapAnnotationProtocol {
+        MapPin(coordinate: coordinate, tint: color)
+    }
+}
 
-struct MapView: View {
-    @State private var cities: [City] = [
+struct CircularAnnotation : MapAnnotationItem {
+    let id = UUID()
+    let color : Color
+    let coordinate: CLLocationCoordinate2D
+    
+    let touchCompletion : () -> ()
+    
+    var annotation: some MapAnnotationProtocol {
+        MapAnnotation(
+            coordinate: coordinate,
+            anchorPoint: CGPoint(x: 0.5, y: 0.5)
+        ) {
+            Circle()
+                .fill(Color.green.opacity(0.5))
+                .frame(width: 44, height: 44)
+                .onTapGesture(perform: touchCompletion)
+        }
+    }
+}
+
+class MapViewModel: ObservableObject {
+    @Published var cities : [City] = [
         City(coordinate: .init(latitude: 33.7128, longitude: 10.0060)),
     ]
+    
+    @Published var selectedCity : City? = City(coordinate: .init(latitude: 33.7128, longitude: 10.0060))
+    
+    @Published var annotations : [AnyMapAnnotationItem] = []
+    
+    
+    func refreshAnnotations() {
+        annotations.removeAll()
+        cities.forEach { city in
+            if city.id == self.selectedCity?.id {
+                //                    go through all of its location
+                //                    foreach location
+                annotations.append( .init(PinAnnotation(color: .red, coordinate: city.coordinate)) )
+                
+            }else {
+                annotations.append(.init(CircularAnnotation(color: .red, coordinate: city.coordinate) {
+                    self.selectedCity = city
+                }))
+            }
+        }
+    }
+}
+
+
+struct MapView: View {
+    
+    @StateObject var viewModel = MapViewModel()
     
     @State private var userTrackingMode: MapUserTrackingMode = .follow
     @State private var region = MKCoordinateRegion(
@@ -22,18 +78,15 @@ struct MapView: View {
     
     @State var offset: CGFloat = 0
     
-    @State var toooogle : Bool = false
-    
     var body: some View {
         
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-            Map(coordinateRegion: $region, annotationItems: cities) { city in
-                MapPin(coordinate: city.coordinate, tint: .green)
-            }
-            .onTapGesture {
-                toooogle.toggle()
-            }
-            .edgesIgnoringSafeArea(.all)
+            
+            Map(coordinateRegion: $region, annotationItems: viewModel.annotations)
+                .onTapGesture {
+                    viewModel.selectedCity = nil
+                }
+                .edgesIgnoringSafeArea(.all)
             
             GeometryReader { geo in
                 
@@ -59,6 +112,16 @@ struct MapView: View {
             }
             .ignoresSafeArea(.all, edges: .bottom)
         }
+        .onReceive(viewModel.$selectedCity, perform: { changes in
+            withAnimation(.default, {
+                if changes == nil {
+                    offset = 150
+                }else{
+                    offset = 0
+                }
+                viewModel.refreshAnnotations()
+            })
+        })
     }
 }
 
