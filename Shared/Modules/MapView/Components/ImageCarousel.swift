@@ -15,7 +15,7 @@ struct ImageCarousel: View {
     #if !os(watchOS)
     let screenSize : CGFloat = UIScreen.main.bounds.width
     #else
-    let screenSize : CGFloat = 300
+    let screenSize : CGFloat = WKInterfaceDevice.current().screenBounds.width
     #endif
     
     @Binding var images : [String]
