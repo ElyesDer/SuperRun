@@ -13,7 +13,7 @@ class SheetViewModel: ObservableObject {
     @Published var images = [String]()
     @Published var cityName : String = ""
     @Published var locations : Int = 0
-    @Published var distance : Int = 0
+    @Published var distance : String = "0"
     
     @Published var isCity = true
     
@@ -27,7 +27,7 @@ class SheetViewModel: ObservableObject {
             isCity = true
             self.cityName = location.city
             self.locations = location.locations.count
-            self.distance = location.distance
+            self.distance = location.distance.description + " Kilometers"
             self.images = ["Basilique de Fourvière1", "Opéra1","Place Bellecour2", "Place des Jacobins1", "Place des Terreaux1"]
         } else if let location = location as? Location {
             isCity = false
@@ -92,8 +92,6 @@ struct BottomSheet: View {
             .padding(.horizontal, 5)
         }
         
-        .background(BlurView(style: .systemMaterial))
-        
     }
     
     var body: some View {
@@ -131,25 +129,32 @@ struct BottomSheet: View {
                     ImageCarousel( images: $viewModel.images)
                 }
             
-            Button(action: {}, label: {
-                ZStack{
-                    
-                    Rectangle()
-                        .fill(Color.green)
-                        .cornerRadius(15)
-                        .frame( height: 30, alignment: .center)
-                    
-                    Text("Click to show in ..")
-                        .font(.caption)
-                        .foregroundColor(.white)
-                    
-                }
-                
-            })
-            .padding(.top)
+            //            Button(action: {}, label: {
+            //                ZStack{
+            //
+            //                    Rectangle()
+            //                        .fill(Color.green)
+            //                        .cornerRadius(15)
+            //                        .frame( height: 30, alignment: .center)
+            //
+            //                    Text("Click to show in ..")
+            //                        .font(.caption)
+            //                        .foregroundColor(.white)
+            //
+            //                }
+            //
+            //            })
+            //            .padding(.top)
         }
         .padding()
-        .background(BlurView(style: .systemMaterial))
+        .if(.isIphone, transform: {
+            #if !os(watchOS)
+            $0
+                .background(BlurView(style: .systemMaterial))
+            #else
+            $0
+            #endif
+        })
         .cornerRadius(15)
         
     }
@@ -164,7 +169,7 @@ struct BottomSheet_Previews: PreviewProvider {
 }
 
 
-
+#if !os(watchOS)
 
 struct BlurView: UIViewRepresentable {
     var style: UIBlurEffect.Style
@@ -179,3 +184,5 @@ struct BlurView: UIViewRepresentable {
         //
     }
 }
+
+#endif

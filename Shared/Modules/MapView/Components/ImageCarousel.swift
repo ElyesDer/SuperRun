@@ -11,6 +11,13 @@ struct ImageCarousel: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    
+    #if !os(watchOS)
+    let screenSize : CGFloat = UIScreen.main.bounds.width
+    #else
+    let screenSize : CGFloat = 300
+    #endif
+    
     @Binding var images : [String]
     var body: some View {
         VStack(alignment : .leading) {
@@ -33,9 +40,10 @@ struct ImageCarousel: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack{
                     ForEach(images, id: \.self) { image in
+                        
                         Image(image)
                             .resizable()
-                            .frame(width: UIScreen.main.bounds.width, height: 200, alignment: .center)
+                            .frame(width: screenSize, height: 200, alignment: .center)
                     }
                 }
             }

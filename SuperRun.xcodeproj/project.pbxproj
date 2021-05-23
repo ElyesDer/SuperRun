@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E920AE02265A491900D85836 /* Bool+Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920AE01265A491900D85836 /* Bool+Env.swift */; };
+		E920AE03265A491900D85836 /* Bool+Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920AE01265A491900D85836 /* Bool+Env.swift */; };
+		E920AE05265A49C800D85836 /* View+Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920AE04265A49C800D85836 /* View+Modifier.swift */; };
+		E920AE06265A49C800D85836 /* View+Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920AE04265A49C800D85836 /* View+Modifier.swift */; };
+		E980A500265A6BDA00E56DF5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980A4FF265A6BDA00E56DF5 /* ShowDetailsView.swift */; };
+		E980A501265A6DE000E56DF5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980A4FF265A6BDA00E56DF5 /* ShowDetailsView.swift */; };
 		E9974C162659B03100A81F77 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C152659B03100A81F77 /* Tests_iOS.swift */; };
 		E9974C212659B03100A81F77 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C202659B03100A81F77 /* Tests_macOS.swift */; };
 		E9974C232659B03100A81F77 /* SuperRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9974BF72659B03100A81F77 /* SuperRun.xcdatamodeld */; };
@@ -28,6 +34,26 @@
 		E9974C522659DB0400A81F77 /* Map+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C512659DB0400A81F77 /* Map+.swift */; };
 		E9974C542659DFB300A81F77 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C532659DFB300A81F77 /* MapViewModel.swift */; };
 		E9974C562659DFF600A81F77 /* CustomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C552659DFF600A81F77 /* CustomAnnotations.swift */; };
+		E9974C5C265A436700A81F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9974C5B265A436700A81F77 /* Assets.xcassets */; };
+		E9974C63265A436700A81F77 /* SuperRun Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E9974C62265A436700A81F77 /* SuperRun Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E9974C68265A436700A81F77 /* SuperRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C67265A436700A81F77 /* SuperRunApp.swift */; };
+		E9974C6A265A436700A81F77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C69265A436700A81F77 /* ContentView.swift */; };
+		E9974C6C265A436700A81F77 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C6B265A436700A81F77 /* NotificationController.swift */; };
+		E9974C6E265A436700A81F77 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C6D265A436700A81F77 /* NotificationView.swift */; };
+		E9974C70265A436700A81F77 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C6F265A436700A81F77 /* ComplicationController.swift */; };
+		E9974C72265A436800A81F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9974C71265A436800A81F77 /* Assets.xcassets */; };
+		E9974C75265A436800A81F77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9974C74265A436800A81F77 /* Preview Assets.xcassets */; };
+		E9974C7A265A436800A81F77 /* SuperRun.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E9974C59265A436500A81F77 /* SuperRun.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E9974C83265A43AB00A81F77 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C402659B0E300A81F77 /* MapView.swift */; };
+		E9974C84265A43B100A81F77 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4C2659B70600A81F77 /* BottomSheet.swift */; };
+		E9974C85265A43B500A81F77 /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4E2659CD7400A81F77 /* ImageCarousel.swift */; };
+		E9974C86265A43B800A81F77 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C532659DFB300A81F77 /* MapViewModel.swift */; };
+		E9974C87265A43BC00A81F77 /* CustomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C552659DFF600A81F77 /* CustomAnnotations.swift */; };
+		E9974C88265A43C100A81F77 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C472659B3A600A81F77 /* APIService.swift */; };
+		E9974C89265A43C400A81F77 /* PinPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C452659B2C500A81F77 /* PinPoint.swift */; };
+		E9974C8A265A43C700A81F77 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4A2659B47400A81F77 /* AppConfig.swift */; };
+		E9974C8B265A43CC00A81F77 /* Map+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C512659DB0400A81F77 /* Map+.swift */; };
+		E9974C8C265A43D400A81F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9974BFC2659B03100A81F77 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +71,51 @@
 			remoteGlobalIDString = E9974C082659B03100A81F77;
 			remoteInfo = "SuperRun (macOS)";
 		};
+		E9974C64265A436700A81F77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9974BF22659B03100A81F77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9974C61265A436700A81F77;
+			remoteInfo = "SuperRun Extension";
+		};
+		E9974C78265A436800A81F77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9974BF22659B03100A81F77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9974C58265A436500A81F77;
+			remoteInfo = SuperRun;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E9974C7E265A436800A81F77 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E9974C63265A436700A81F77 /* SuperRun Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9974C82265A436800A81F77 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E9974C7A265A436800A81F77 /* SuperRun.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E920AE01265A491900D85836 /* Bool+Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Env.swift"; sourceTree = "<group>"; };
+		E920AE04265A49C800D85836 /* View+Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Modifier.swift"; sourceTree = "<group>"; };
+		E980A4FF265A6BDA00E56DF5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
 		E9974BF82659B03100A81F77 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		E9974BF92659B03100A81F77 /* SuperRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperRunApp.swift; sourceTree = "<group>"; };
 		E9974BFA2659B03100A81F77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +141,19 @@
 		E9974C512659DB0400A81F77 /* Map+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map+.swift"; sourceTree = "<group>"; };
 		E9974C532659DFB300A81F77 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E9974C552659DFF600A81F77 /* CustomAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotations.swift; sourceTree = "<group>"; };
+		E9974C59265A436500A81F77 /* SuperRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9974C5B265A436700A81F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9974C5D265A436700A81F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9974C62265A436700A81F77 /* SuperRun Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SuperRun Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9974C67265A436700A81F77 /* SuperRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperRunApp.swift; sourceTree = "<group>"; };
+		E9974C69265A436700A81F77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9974C6B265A436700A81F77 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E9974C6D265A436700A81F77 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		E9974C6F265A436700A81F77 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		E9974C71265A436800A81F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9974C74265A436800A81F77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9974C76265A436800A81F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9974C77265A436800A81F77 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +185,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9974C5F265A436700A81F77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,6 +203,8 @@
 				E9974C0A2659B03100A81F77 /* macOS */,
 				E9974C142659B03100A81F77 /* Tests iOS */,
 				E9974C1F2659B03100A81F77 /* Tests macOS */,
+				E9974C5A265A436500A81F77 /* SuperRun */,
+				E9974C66265A436700A81F77 /* SuperRun Extension */,
 				E9974C022659B03100A81F77 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,6 +231,8 @@
 				E9974C092659B03100A81F77 /* SuperRun.app */,
 				E9974C112659B03100A81F77 /* Tests iOS.xctest */,
 				E9974C1C2659B03100A81F77 /* Tests macOS.xctest */,
+				E9974C59265A436500A81F77 /* SuperRun.app */,
+				E9974C62265A436700A81F77 /* SuperRun Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,8 +354,44 @@
 			isa = PBXGroup;
 			children = (
 				E9974C512659DB0400A81F77 /* Map+.swift */,
+				E920AE01265A491900D85836 /* Bool+Env.swift */,
+				E920AE04265A49C800D85836 /* View+Modifier.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9974C5A265A436500A81F77 /* SuperRun */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C5B265A436700A81F77 /* Assets.xcassets */,
+				E9974C5D265A436700A81F77 /* Info.plist */,
+			);
+			path = SuperRun;
+			sourceTree = "<group>";
+		};
+		E9974C66265A436700A81F77 /* SuperRun Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C67265A436700A81F77 /* SuperRunApp.swift */,
+				E9974C69265A436700A81F77 /* ContentView.swift */,
+				E9974C6B265A436700A81F77 /* NotificationController.swift */,
+				E9974C6D265A436700A81F77 /* NotificationView.swift */,
+				E9974C6F265A436700A81F77 /* ComplicationController.swift */,
+				E9974C71265A436800A81F77 /* Assets.xcassets */,
+				E9974C76265A436800A81F77 /* Info.plist */,
+				E9974C77265A436800A81F77 /* PushNotificationPayload.apns */,
+				E9974C73265A436800A81F77 /* Preview Content */,
+				E980A4FF265A6BDA00E56DF5 /* ShowDetailsView.swift */,
+			);
+			path = "SuperRun Extension";
+			sourceTree = "<group>";
+		};
+		E9974C73265A436800A81F77 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E9974C74265A436800A81F77 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +404,12 @@
 				E9974BFD2659B03100A81F77 /* Sources */,
 				E9974BFE2659B03100A81F77 /* Frameworks */,
 				E9974BFF2659B03100A81F77 /* Resources */,
+				E9974C82265A436800A81F77 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E9974C79265A436800A81F77 /* PBXTargetDependency */,
 			);
 			name = "SuperRun (iOS)";
 			productName = "SuperRun (iOS)";
@@ -339,6 +469,40 @@
 			productReference = E9974C1C2659B03100A81F77 /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E9974C58265A436500A81F77 /* SuperRun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9974C7F265A436800A81F77 /* Build configuration list for PBXNativeTarget "SuperRun" */;
+			buildPhases = (
+				E9974C57265A436500A81F77 /* Resources */,
+				E9974C7E265A436800A81F77 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9974C65265A436700A81F77 /* PBXTargetDependency */,
+			);
+			name = SuperRun;
+			productName = SuperRun;
+			productReference = E9974C59265A436500A81F77 /* SuperRun.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		E9974C61265A436700A81F77 /* SuperRun Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9974C7B265A436800A81F77 /* Build configuration list for PBXNativeTarget "SuperRun Extension" */;
+			buildPhases = (
+				E9974C5E265A436700A81F77 /* Sources */,
+				E9974C5F265A436700A81F77 /* Frameworks */,
+				E9974C60265A436700A81F77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SuperRun Extension";
+			productName = "SuperRun Extension";
+			productReference = E9974C62265A436700A81F77 /* SuperRun Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -362,6 +526,12 @@
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = E9974C082659B03100A81F77;
 					};
+					E9974C58265A436500A81F77 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					E9974C61265A436700A81F77 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 				};
 			};
 			buildConfigurationList = E9974BF52659B03100A81F77 /* Build configuration list for PBXProject "SuperRun" */;
@@ -381,6 +551,8 @@
 				E9974C082659B03100A81F77 /* SuperRun (macOS) */,
 				E9974C102659B03100A81F77 /* Tests iOS */,
 				E9974C1B2659B03100A81F77 /* Tests macOS */,
+				E9974C58265A436500A81F77 /* SuperRun */,
+				E9974C61265A436700A81F77 /* SuperRun Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -416,6 +588,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9974C57265A436500A81F77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9974C5C265A436700A81F77 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9974C60265A436700A81F77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9974C75265A436800A81F77 /* Preview Assets.xcassets in Resources */,
+				E9974C8C265A43D400A81F77 /* Assets.xcassets in Resources */,
+				E9974C72265A436800A81F77 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -425,17 +615,20 @@
 			files = (
 				E9974C232659B03100A81F77 /* SuperRun.xcdatamodeld in Sources */,
 				E9974C4D2659B70600A81F77 /* BottomSheet.swift in Sources */,
+				E980A501265A6DE000E56DF5 /* ShowDetailsView.swift in Sources */,
 				E9974C522659DB0400A81F77 /* Map+.swift in Sources */,
 				E9974C4B2659B47400A81F77 /* AppConfig.swift in Sources */,
 				E9974C482659B3A600A81F77 /* APIService.swift in Sources */,
 				E9974C292659B03100A81F77 /* Persistence.swift in Sources */,
 				E9974C462659B2C500A81F77 /* PinPoint.swift in Sources */,
+				E920AE05265A49C800D85836 /* View+Modifier.swift in Sources */,
 				E9974C412659B0E300A81F77 /* MapView.swift in Sources */,
 				E9974C4F2659CD7400A81F77 /* ImageCarousel.swift in Sources */,
 				E9974C252659B03100A81F77 /* SuperRunApp.swift in Sources */,
 				E9974C272659B03100A81F77 /* ContentView.swift in Sources */,
 				E9974C562659DFF600A81F77 /* CustomAnnotations.swift in Sources */,
 				E9974C542659DFB300A81F77 /* MapViewModel.swift in Sources */,
+				E920AE02265A491900D85836 /* Bool+Env.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +659,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9974C5E265A436700A81F77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9974C6C265A436700A81F77 /* NotificationController.swift in Sources */,
+				E9974C87265A43BC00A81F77 /* CustomAnnotations.swift in Sources */,
+				E920AE03265A491900D85836 /* Bool+Env.swift in Sources */,
+				E920AE06265A49C800D85836 /* View+Modifier.swift in Sources */,
+				E9974C89265A43C400A81F77 /* PinPoint.swift in Sources */,
+				E9974C83265A43AB00A81F77 /* MapView.swift in Sources */,
+				E9974C84265A43B100A81F77 /* BottomSheet.swift in Sources */,
+				E9974C88265A43C100A81F77 /* APIService.swift in Sources */,
+				E980A500265A6BDA00E56DF5 /* ShowDetailsView.swift in Sources */,
+				E9974C6A265A436700A81F77 /* ContentView.swift in Sources */,
+				E9974C70265A436700A81F77 /* ComplicationController.swift in Sources */,
+				E9974C8B265A43CC00A81F77 /* Map+.swift in Sources */,
+				E9974C68265A436700A81F77 /* SuperRunApp.swift in Sources */,
+				E9974C6E265A436700A81F77 /* NotificationView.swift in Sources */,
+				E9974C8A265A43C700A81F77 /* AppConfig.swift in Sources */,
+				E9974C85265A43B500A81F77 /* ImageCarousel.swift in Sources */,
+				E9974C86265A43B800A81F77 /* MapViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -478,6 +695,16 @@
 			isa = PBXTargetDependency;
 			target = E9974C082659B03100A81F77 /* SuperRun (macOS) */;
 			targetProxy = E9974C1D2659B03100A81F77 /* PBXContainerItemProxy */;
+		};
+		E9974C65265A436700A81F77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9974C61265A436700A81F77 /* SuperRun Extension */;
+			targetProxy = E9974C64265A436700A81F77 /* PBXContainerItemProxy */;
+		};
+		E9974C79265A436800A81F77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9974C58265A436500A81F77 /* SuperRun */;
+			targetProxy = E9974C78265A436800A81F77 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -775,6 +1002,96 @@
 			};
 			name = Release;
 		};
+		E9974C7C265A436800A81F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SuperRun Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 75K654T5D3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SuperRun Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.der.SuperRun.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		E9974C7D265A436800A81F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SuperRun Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 75K654T5D3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SuperRun Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.der.SuperRun.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		E9974C80265A436800A81F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75K654T5D3;
+				IBSC_MODULE = SuperRun_Extension;
+				INFOPLIST_FILE = SuperRun/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.der.SuperRun.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		E9974C81265A436800A81F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75K654T5D3;
+				IBSC_MODULE = SuperRun_Extension;
+				INFOPLIST_FILE = SuperRun/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.der.SuperRun.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -819,6 +1136,24 @@
 			buildConfigurations = (
 				E9974C392659B03100A81F77 /* Debug */,
 				E9974C3A2659B03100A81F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9974C7B265A436800A81F77 /* Build configuration list for PBXNativeTarget "SuperRun Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9974C7C265A436800A81F77 /* Debug */,
+				E9974C7D265A436800A81F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9974C7F265A436800A81F77 /* Build configuration list for PBXNativeTarget "SuperRun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9974C80265A436800A81F77 /* Debug */,
+				E9974C81265A436800A81F77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
