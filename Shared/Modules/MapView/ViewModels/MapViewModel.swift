@@ -9,10 +9,11 @@ import Foundation
 import Combine
 
 
+
 class MapViewModel: ObservableObject {
     @Published var cities = [City]()
     
-    @Published var selectedCity : City?
+    @Published var selectedCity : PinPoint?
     
     @Published var annotations : [AnyMapAnnotationItem] = []
     
@@ -21,11 +22,14 @@ class MapViewModel: ObservableObject {
     func refreshAnnotations() {
         annotations.removeAll()
         cities.forEach { city in
-            if city.id == self.selectedCity?.id {
+            if (self.selectedCity?.id) != nil {
                 //                    go through all of its location
                 //                    foreach location
                 city.locations.forEach { location in
-                    annotations.append( .init(PinAnnotation(color: .green, coordinate: .init(latitude: location.latitude , longitude: location.longitude))) )
+                    annotations.append( .init(MarkedPinAnnotation(coordinate: .init(latitude: location.latitude, longitude: location.longitude), meta: location.name){
+                        location.id = UUID()
+                        self.selectedCity = location
+                    }))
                 }
                 
             }else {

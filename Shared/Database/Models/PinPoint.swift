@@ -8,9 +8,13 @@
 import Foundation
 import MapKit
 
+protocol PinPoint : Codable {
+    var id : UUID? { get set }
+}
+
 // MARK: - PinPoint
-struct City: Codable {
-    let id = UUID()
+struct City: PinPoint {
+    var id: UUID? = UUID()
     let city: String
     let isOnline: Bool
     let distance: Int
@@ -25,7 +29,8 @@ struct City: Codable {
 }
 
 // MARK: - Location
-struct Location: Codable {
+class Location: PinPoint {
+    var id: UUID? = UUID()
     let name: String
     let latitude, longitude: Double
 }

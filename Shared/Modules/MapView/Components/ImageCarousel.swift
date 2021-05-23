@@ -16,13 +16,18 @@ struct ImageCarousel: View {
         VStack(alignment : .leading) {
             
             
-            Image(systemName: "multiply")
-                .resizable()
-                .frame(width: 15, height: 15, alignment: .center)
-                .foregroundColor(.white)
-                .onTapGesture {
-                    presentationMode.wrappedValue.dismiss()
-                }
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Image(systemName: "multiply")
+                    .resizable()
+                    .frame(width: 15, height: 15, alignment: .center)
+                    .foregroundColor(.white)
+                    .contentShape(Rectangle())
+            })
+            .frame(width: 30, height: 30, alignment: .center)
+            .padding([.top,.leading])
+            
             
             Spacer()
             ScrollView(.horizontal, showsIndicators: false) {

@@ -17,22 +17,27 @@ class SheetViewModel: ObservableObject {
     
     @Published var isCity = true
     
-    init(location : City?) {
-        isCity = true
-        if let location = location {
+    init(location : PinPoint?) {
+        
+        guard let location = location else {
+            return
+        }
+        
+        if let location = location as? City {
+            isCity = true
             self.cityName = location.city
             self.locations = location.locations.count
             self.distance = location.distance
             self.images = ["Basilique de Fourvière1", "Opéra1","Place Bellecour2", "Place des Jacobins1", "Place des Terreaux1"]
+        } else if let location = location as? Location {
+            isCity = false
+            self.cityName = location.name
+            for i in 1...2 {
+                self.images.append(self.cityName + i.description)
+            }
         }
-    }
-    
-    init(location : Location) {
-        isCity = false
-        self.cityName = location.name
-        for i in 1...2 {
-            self.images.append(self.cityName + i.description)
-        }
+        
+        
     }
 }
 
@@ -63,8 +68,6 @@ struct BottomSheet: View {
                             .font(.footnote)
                         Text("Distance cover : \(viewModel.distance)")
                             .font(.caption2)
-                    } else {
-                        Spacer()
                     }
                 }
                 
@@ -151,7 +154,7 @@ struct BottomSheet: View {
 
 struct BottomSheet_Previews: PreviewProvider {
     static var previews: some View {
-        BottomSheet(offset: .constant(.zero), value: .zero, viewModel: .init(location: .init(city: "Tunisia", isOnline: true, distance: 234, locations: [], latitude: 33.234, longitude: 10.1234)), closeCompletion: {
+        BottomSheet(offset: .constant(.zero), value: .zero, viewModel: .init(location: City(city: "Tunisia", isOnline: true, distance: 123, locations: [], latitude: nil, longitude: nil)), closeCompletion: {
             
         })
     }
