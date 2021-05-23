@@ -157,7 +157,7 @@ struct BottomSheet: View {
 
 struct BottomSheet_Previews: PreviewProvider {
     static var previews: some View {
-        BottomSheet(offset: .constant(.zero), value: .zero, viewModel: .init(location: City(city: "Tunisia", isOnline: true, distance: 123, locations: [], latitude: nil, longitude: nil)), closeCompletion: {
+        BottomSheet(offset: .constant(.zero), value: .zero, viewModel: .init(location: City(latitude: nil, longitude: nil, city: "Tunisia", isOnline: true, distance: 123, locations: [])), closeCompletion: {
             
         })
     }

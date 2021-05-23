@@ -12,7 +12,6 @@ struct MapView: View {
     
     @StateObject var viewModel = MapViewModel()
     
-    @State private var userTrackingMode: MapUserTrackingMode = .follow
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 46.227638, longitude: 2.213749), // maybe use core location to init first location
         span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
@@ -59,6 +58,11 @@ struct MapView: View {
                     offset = 180
                 }else{
                     offset = 0
+                    if let latitude = changes?.latitude, let longitude = changes?.longitude {
+                        region.center = CLLocationCoordinate2D(latitude: latitude , longitude: longitude)
+                        region.span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
+                    }
+                    
                 }
                 viewModel.refreshAnnotations()
             })

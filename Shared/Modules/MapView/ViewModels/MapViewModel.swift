@@ -26,7 +26,7 @@ class MapViewModel: ObservableObject {
                 //                    go through all of its location
                 //                    foreach location
                 city.locations.forEach { location in
-                    annotations.append( .init(MarkedPinAnnotation(coordinate: .init(latitude: location.latitude, longitude: location.longitude), meta: location.name){
+                    annotations.append( .init(MarkedPinAnnotation(coordinate: .init(latitude: location.latitude!, longitude: location.longitude!), meta: location.name){
                         location.id = UUID()
                         self.selectedCity = location
                     }))
