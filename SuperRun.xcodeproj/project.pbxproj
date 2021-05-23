@@ -26,6 +26,8 @@
 		E9974C4D2659B70600A81F77 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4C2659B70600A81F77 /* BottomSheet.swift */; };
 		E9974C4F2659CD7400A81F77 /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C4E2659CD7400A81F77 /* ImageCarousel.swift */; };
 		E9974C522659DB0400A81F77 /* Map+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C512659DB0400A81F77 /* Map+.swift */; };
+		E9974C542659DFB300A81F77 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C532659DFB300A81F77 /* MapViewModel.swift */; };
+		E9974C562659DFF600A81F77 /* CustomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9974C552659DFF600A81F77 /* CustomAnnotations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E9974C4C2659B70600A81F77 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		E9974C4E2659CD7400A81F77 /* ImageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarousel.swift; sourceTree = "<group>"; };
 		E9974C512659DB0400A81F77 /* Map+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map+.swift"; sourceTree = "<group>"; };
+		E9974C532659DFB300A81F77 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		E9974C552659DFF600A81F77 /* CustomAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 		E9974C3D2659B0A700A81F77 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E9974C532659DFB300A81F77 /* MapViewModel.swift */,
+				E9974C552659DFF600A81F77 /* CustomAnnotations.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -428,6 +434,8 @@
 				E9974C4F2659CD7400A81F77 /* ImageCarousel.swift in Sources */,
 				E9974C252659B03100A81F77 /* SuperRunApp.swift in Sources */,
 				E9974C272659B03100A81F77 /* ContentView.swift in Sources */,
+				E9974C562659DFF600A81F77 /* CustomAnnotations.swift in Sources */,
+				E9974C542659DFB300A81F77 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
