@@ -9,17 +9,18 @@ import Foundation
 import MapKit
 
 // MARK: - PinPoint
-struct PinPoint: Codable {
+struct City: Codable {
     let id = UUID()
     let city: String
     let isOnline: Bool
     let distance: Int
     let locations: [Location]
+    let latitude, longitude: Double? // Maybe reverse geocoding ?
     
     enum CodingKeys: String, CodingKey {
         case city
         case isOnline = "is_online"
-        case distance, locations
+        case distance, locations, latitude, longitude
     }
 }
 
@@ -27,10 +28,4 @@ struct PinPoint: Codable {
 struct Location: Codable {
     let name: String
     let latitude, longitude: Double
-}
-
-
-struct City: Identifiable {
-    let id = UUID()
-    let coordinate: CLLocationCoordinate2D
 }

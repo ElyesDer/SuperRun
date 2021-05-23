@@ -24,6 +24,7 @@ struct CircularAnnotation : MapAnnotationItem {
     let color : Color
     let coordinate: CLLocationCoordinate2D
     
+    let meta : String
     let touchCompletion : () -> ()
     
     var annotation: some MapAnnotationProtocol {
@@ -31,10 +32,17 @@ struct CircularAnnotation : MapAnnotationItem {
             coordinate: coordinate,
             anchorPoint: CGPoint(x: 0.5, y: 0.5)
         ) {
-            Circle()
-                .fill(Color.green.opacity(0.5))
-                .frame(width: 44, height: 44)
-                .onTapGesture(perform: touchCompletion)
+            
+            ZStack {
+                Circle()
+                    .fill(Color.green.opacity(0.5))
+                    .frame(width: 44, height: 44)
+                    .onTapGesture(perform: touchCompletion)
+                
+                Text(meta)
+                    .font(.caption2)
+            }
+            .animation(.interactiveSpring())
         }
     }
 }

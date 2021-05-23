@@ -10,7 +10,7 @@ import Foundation
 struct AppConfig {
     private static let baseUrl = "http://lmstudio.free.fr/"
     enum EndPoints : String {
-        case locations = "lyon"
+        case locations = "lyon.json"
         
         func buildPath() -> String {
             return AppConfig.baseUrl + self.rawValue

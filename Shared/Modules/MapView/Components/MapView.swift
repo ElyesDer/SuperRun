@@ -14,7 +14,7 @@ struct MapView: View {
     
     @State private var userTrackingMode: MapUserTrackingMode = .follow
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 33.0617, longitude: 10.1918),
+        center: CLLocationCoordinate2D(latitude: 46.227638, longitude: 2.213749), // maybe use core location to init first location
         span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
     )
     
@@ -25,46 +25,49 @@ struct MapView: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             
             Map(coordinateRegion: $region, annotationItems: viewModel.annotations)
-                .onTapGesture {
-                    viewModel.selectedCity = nil
-                }
                 .edgesIgnoringSafeArea(.all)
             
             GeometryReader { geo in
                 
-                BottomSheet(offset: $offset, value: (-geo.frame(in: .global).height + 150))
-                    .offset(y: geo.frame(in: .global).height - 140)
-                    // adding Gesture
-                    .offset(y: offset)
-                    .gesture(DragGesture().onChanged({ value in
+                BottomSheet(offset: $offset, value: (-geo.frame(in: .global).height + 180), viewModel: .init(location: viewModel.selectedCity)) {
+                    self.viewModel.selectedCity = nil
+                }
+                .offset(y: geo.frame(in: .global).height - 160)
+                // adding Gesture
+                .offset(y: offset)
+                .gesture(DragGesture().onChanged({ value in
+                    
+                    withAnimation {
                         
-                        withAnimation {
-                            
-                            if value.startLocation.y > geo.frame(in: .global).midX {
-                                if  offset > (-geo.frame(in: .global).height + 150) {
-                                    offset = value.translation.height
-                                }
+                        if value.startLocation.y > geo.frame(in: .global).midX {
+                            if  offset > (-geo.frame(in: .global).height + 180) {
+                                offset = value.translation.height
                             }
                         }
-                    }).onEnded({ value in
-                        withAnimation {
-                            offset = 0
-                        }
-                    }))
+                    }
+                }).onEnded({ value in
+                    withAnimation {
+                        offset = 0
+                    }
+                }))
             }
             .ignoresSafeArea(.all, edges: .bottom)
         }
         .onReceive(viewModel.$selectedCity, perform: { changes in
             withAnimation(.default, {
                 if changes == nil {
-                    offset = 150
+                    offset = 180
                 }else{
                     offset = 0
                 }
                 viewModel.refreshAnnotations()
             })
         })
+        .onAppear(perform: {
+            viewModel.load()
+        })
     }
+    
 }
 
 struct MapView_Previews: PreviewProvider {
