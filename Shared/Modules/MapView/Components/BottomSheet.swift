@@ -123,12 +123,17 @@ struct BottomSheet: View {
                 })
                 
             }
+            .padding(.bottom, 20)
             
             CityViewRender
                 .fullScreenCover(isPresented: $presentImageViewer) {
                     ImageCarousel( images: $viewModel.images)
                 }
             
+            VStack{
+                
+            }
+            .frame( height: 30, alignment: .center)
             //            Button(action: {}, label: {
             //                ZStack{
             //

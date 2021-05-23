@@ -33,7 +33,8 @@ struct ImageCarousel: View {
                     .contentShape(Rectangle())
             })
             .frame(width: 30, height: 30, alignment: .center)
-            .padding([.top,.leading])
+            .padding(.top, 30)
+            .padding(.leading, 15)
             
             
             Spacer()
