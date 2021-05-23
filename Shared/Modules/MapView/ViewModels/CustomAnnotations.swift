@@ -37,8 +37,8 @@ struct MarkedPinAnnotation : MapAnnotationItem {
                 Text(meta)
                     .font(.caption2)
                 
-                Circle()
-                    .fill(Color.green.opacity(0.5))
+                Image("pin")
+                    .resizable()
                     .frame(width: 44, height: 44)
                     .onTapGesture(perform: touchCompletion)
                 

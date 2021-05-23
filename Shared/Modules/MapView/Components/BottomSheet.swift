@@ -118,6 +118,7 @@ struct BottomSheet: View {
                         Image(systemName: "multiply")
                             .resizable()
                             .frame(width: 8, height: 8, alignment: .center)
+                            .foregroundColor(.green)
                         
                     }
                     .frame(width: 20, height: 20, alignment: .center)
@@ -134,12 +135,14 @@ struct BottomSheet: View {
                 ZStack{
                     
                     Rectangle()
+                        .fill(Color.green)
                         .cornerRadius(15)
                         .frame( height: 30, alignment: .center)
                     
                     Text("Click to show in ..")
                         .font(.caption)
                         .foregroundColor(.white)
+                    
                 }
                 
             })
